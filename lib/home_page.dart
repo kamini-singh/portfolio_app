@@ -83,7 +83,7 @@ class Homepage extends StatelessWidget {
                     width: 15,
                   ),
                   Text(
-                    'kaminisingh540@gmail.com',
+                    'xxxxxxx@gmail.com',
                   ),
                 ],
               ),
