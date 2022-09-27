@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class Homepage extends StatelessWidget {
   const Homepage({Key? key}) : super(key: key);
@@ -49,48 +50,66 @@ class Homepage extends StatelessWidget {
               ),
             ),
 
-            Container(
-              margin: const EdgeInsets.symmetric(vertical: 10, horizontal: 40),
-              padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 30),
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(10),
-                color: Colors.blue[100],
-              ),
-              child: Row(
-                children: const [
-                  Icon(Icons.file_copy),
-                  SizedBox(
-                    width: 15,
-                  ),
-                  Text(
-                    'Projects',
-                  ),
-                ],
+            GestureDetector(
+              onTap: () {
+                Navigator.pushNamed(context, 'projects_page');
+              } ,
+              child: Container(
+                margin: const EdgeInsets.symmetric(vertical: 10, horizontal: 40),
+                padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 30),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(10),
+                  color: Colors.blue[100],
+                ),
+                child: Row(
+                  children: const [
+                    Icon(Icons.file_copy),
+                    SizedBox(
+                      width: 15,
+                    ),
+                    Text(
+                      'Projects',
+                    ),
+                  ],
+                ),
               ),
             ),
 
-            Container(
-              margin: const EdgeInsets.symmetric(vertical: 10, horizontal: 40),
-              padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 30),
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(10),
-                color: Colors.blue[100],
-              ),
-              child: Row(
-                children: const [
-                  Icon(Icons.connect_without_contact),
-                  SizedBox(
-                    width: 15,
-                  ),
-                  Text(
-                    'kaminisingh540@gmail.com',
-                  ),
-                ],
+            GestureDetector(
+              onTap:(){
+                final Uri _url = Uri.parse('https://www.linkedin.com/');
+               _launchUrl(_url);
+              },
+              child: Container(
+                margin: const EdgeInsets.symmetric(vertical: 10, horizontal: 40),
+                padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 30),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(10),
+                  color: Colors.blue[100],
+                ),
+                child: Row(
+                  children: const [
+                    Icon(Icons.connect_without_contact),
+                    SizedBox(
+                      width: 15,
+                    ),
+                    Text(
+                      'Connect with me on LinkedIn!',
+                    ),
+                  ],
+                ),
               ),
             ),
           ],
-        )),
+        ),
+        ),
       ),
     );
+  }
+}
+
+Future<void> _launchUrl(_url) async {
+  if (!await launchUrl(_url)) {
+    throw 'Could not launch $_url';
   }
 }
