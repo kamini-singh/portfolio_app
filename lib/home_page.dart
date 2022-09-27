@@ -9,119 +9,103 @@ class Homepage extends StatelessWidget {
     return MaterialApp(
       home: SafeArea(
         child: Scaffold(
-            body: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            const CircleAvatar(
-              radius: 60,
-              backgroundColor: Colors.blue,
-              backgroundImage: AssetImage(
-                'assets/kamini.png',
+          body: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              const CircleAvatar(
+                radius: 60,
+                backgroundColor: Colors.blue,
+                backgroundImage: AssetImage(
+                  'assets/kamini.png',
+                ),
               ),
-            ),
-            const Text('Kamini Singh',
+              const Text('Kamini Singh',
+                  style: TextStyle(
+                    fontSize: 40,
+                    fontWeight: FontWeight.bold,
+                  )),
+              const Text(
+                'IT Undergrad',
                 style: TextStyle(
-                  fontSize: 40,
-                  fontWeight: FontWeight.bold,
-                )),
-            const Text(
-              'IT Undergrad',
-              style: TextStyle(
-                fontSize: 20,
+                  fontSize: 20,
+                ),
               ),
-            ),
-            Container(
-              margin: const EdgeInsets.symmetric(vertical: 10, horizontal: 40),
-              padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 30),
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(10),
-                color: Colors.blue[100],
-              ),
-              child: Row(
-                children: const [
-                  Icon(Icons.email_outlined),
-                  SizedBox(
-                    width: 15,
-                  ),
-                  Text(
-                    'kaminisingh540@gmail.com',
-                  ),
-                ],
-              ),
-            ),
-
-            GestureDetector(
-              onTap: () {
-                Navigator.pushNamed(context, 'projects_page');
-              } ,
-              child: Container(
-                margin: const EdgeInsets.symmetric(vertical: 10, horizontal: 40),
-                padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 30),
+              Container(
+                margin:
+                    const EdgeInsets.symmetric(vertical: 10, horizontal: 40),
+                padding:
+                    const EdgeInsets.symmetric(vertical: 20, horizontal: 30),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10),
                   color: Colors.blue[100],
                 ),
                 child: Row(
                   children: const [
-                    Icon(Icons.file_copy),
+                    Icon(Icons.email_outlined),
                     SizedBox(
                       width: 15,
                     ),
                     Text(
-                      'Projects',
+                      'kaminisingh540@gmail.com',
                     ),
                   ],
                 ),
               ),
-            ),
-
-<<<<<<< HEAD
-            GestureDetector(
-              onTap:(){
-                final Uri _url = Uri.parse('https://www.linkedin.com/');
-               _launchUrl(_url);
-              },
-              child: Container(
-                margin: const EdgeInsets.symmetric(vertical: 10, horizontal: 40),
-                padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 30),
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(10),
-                  color: Colors.blue[100],
-                ),
-                child: Row(
-                  children: const [
-                    Icon(Icons.connect_without_contact),
-                    SizedBox(
-                      width: 15,
-                    ),
-                    Text(
-                      'Connect with me on LinkedIn!',
-                    ),
-                  ],
-                ),
-=======
-            Container(
-              margin: const EdgeInsets.symmetric(vertical: 10, horizontal: 40),
-              padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 30),
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(10),
-                color: Colors.blue[100],
-              ),
-              child: Row(
-                children: const [
-                  Icon(Icons.connect_without_contact),
-                  SizedBox(
-                    width: 15,
+              GestureDetector(
+                onTap: () {
+                  Navigator.pushNamed(context, 'projects_page');
+                },
+                child: Container(
+                  margin:
+                      const EdgeInsets.symmetric(vertical: 10, horizontal: 40),
+                  padding:
+                      const EdgeInsets.symmetric(vertical: 20, horizontal: 30),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10),
+                    color: Colors.blue[100],
                   ),
-                  Text(
-                    'xxxxxxx@gmail.com',
+                  child: Row(
+                    children: const [
+                      Icon(Icons.file_copy),
+                      SizedBox(
+                        width: 15,
+                      ),
+                      Text(
+                        'Projects',
+                      ),
+                    ],
                   ),
-                ],
->>>>>>> 813b5728e16c5425b22abcf5de510b324729fc39
+                ),
               ),
-            ),
-          ],
-        ),
+              GestureDetector(
+                onTap: () {
+                  final Uri _url = Uri.parse('https://www.linkedin.com/');
+                  _launchUrl(_url);
+                },
+                child: Container(
+                  margin:
+                      const EdgeInsets.symmetric(vertical: 10, horizontal: 40),
+                  padding:
+                      const EdgeInsets.symmetric(vertical: 20, horizontal: 30),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10),
+                    color: Colors.blue[100],
+                  ),
+                  child: Row(
+                    children: const [
+                      Icon(Icons.connect_without_contact),
+                      SizedBox(
+                        width: 15,
+                      ),
+                      Text(
+                        'Connect with me on LinkedIn!',
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );
