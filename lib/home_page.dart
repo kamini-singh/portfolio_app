@@ -75,6 +75,7 @@ class Homepage extends StatelessWidget {
               ),
             ),
 
+<<<<<<< HEAD
             GestureDetector(
               onTap:(){
                 final Uri _url = Uri.parse('https://www.linkedin.com/');
@@ -98,6 +99,25 @@ class Homepage extends StatelessWidget {
                     ),
                   ],
                 ),
+=======
+            Container(
+              margin: const EdgeInsets.symmetric(vertical: 10, horizontal: 40),
+              padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 30),
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(10),
+                color: Colors.blue[100],
+              ),
+              child: Row(
+                children: const [
+                  Icon(Icons.connect_without_contact),
+                  SizedBox(
+                    width: 15,
+                  ),
+                  Text(
+                    'xxxxxxx@gmail.com',
+                  ),
+                ],
+>>>>>>> 813b5728e16c5425b22abcf5de510b324729fc39
               ),
             ),
           ],
